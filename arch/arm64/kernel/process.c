@@ -487,7 +487,7 @@ unsigned long arch_align_stack(unsigned long sp)
 unsigned long arch_randomize_brk(struct mm_struct *mm)
 {
 	if (is_compat_task())
-		return mm->brk + get_random_long() % 0x02000000;
+		return mm->brk + get_random_long() % 0x02000000 + PAGE_SIZE;
 	else
-		return mm->brk + get_random_long() % 0x40000000;
+		return mm->brk + get_random_long() % 0x40000000 + PAGE_SIZE;
 }
