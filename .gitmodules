@@ -7,3 +7,6 @@
 [submodule "drivers/staging/fw-api"]
 	path = drivers/staging/fw-api
 	url = https://android.googlesource.com/kernel/msm-modules/wlan-fw-api
+[submodule "techpack/audio"]
+	path = techpack/audio
+	url = https://github.com/GrapheneOS/kernel_google_crosshatch_techpack_audio.git
