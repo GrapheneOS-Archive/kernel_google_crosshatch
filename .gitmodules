@@ -1,0 +1,9 @@
+[submodule "drivers/staging/qcacld-3.0"]
+	path = drivers/staging/qcacld-3.0
+	url = https://github.com/GrapheneOS/kernel_google_crosshatch_drivers_staging_qcacld-3.0.git
+[submodule "drivers/staging/qca-wifi-host-cmn"]
+	path = drivers/staging/qca-wifi-host-cmn
+	url = https://github.com/GrapheneOS/kernel_google_crosshatch_drivers_staging_qca-wifi-host-cmn.git
+[submodule "drivers/staging/fw-api"]
+	path = drivers/staging/fw-api
+	url = https://github.com/GrapheneOS/kernel_google_crosshatch_drivers_staging_fw-api.git
