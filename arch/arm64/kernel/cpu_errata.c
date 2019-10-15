@@ -19,6 +19,7 @@
 #include <linux/arm-smccc.h>
 #include <linux/psci.h>
 #include <linux/types.h>
+#include <asm/alternative.h>
 #include <asm/cachetype.h>
 #include <asm/cpu.h>
 #include <asm/cputype.h>
@@ -275,6 +276,12 @@ void __init arm64_update_smccc_conduit(struct alt_instr *alt,
 	*updptr = cpu_to_le32(insn);
 }
 
+__attribute__((used))
+alternative_cb_t arm64_update_smccc_conduit_indirectly_callable(void)
+{
+	return &arm64_update_smccc_conduit;
+}
+
 void __init arm64_enable_wa2_handling(struct alt_instr *alt,
 				      __le32 *origptr, __le32 *updptr,
 				      int nr_inst)
@@ -287,6 +294,12 @@ void __init arm64_enable_wa2_handling(struct alt_instr *alt,
 	 */
 	if (arm64_get_ssbd_state() == ARM64_SSBD_KERNEL)
 		*updptr = cpu_to_le32(aarch64_insn_gen_nop());
+}
+
+__attribute__((used))
+alternative_cb_t arm64_enable_wa2_handling_indirectly_callable(void)
+{
+	return &arm64_enable_wa2_handling;
 }
 
 void arm64_set_ssbd_mitigation(bool state)
