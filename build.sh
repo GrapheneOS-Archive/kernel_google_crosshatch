@@ -25,7 +25,14 @@ PATH="$TOP/prebuilts/misc/linux-x86/dtc:$PATH"
 PATH="$TOP/prebuilts/misc/linux-x86/libufdt:$PATH"
 export LD_LIBRARY_PATH="$TOP/prebuilts/clang/host/linux-x86/clang-r353983c/lib64:$LD_LIBRARY_PATH"
 
-make O=out ARCH=arm64 ${DEVICE}_defconfig
+make \
+    O=out \
+    ARCH=arm64 \
+    CC=clang \
+    CLANG_TRIPLE=aarch64-linux-gnu- \
+    CROSS_COMPILE=aarch64-linux-android- \
+    CROSS_COMPILE_ARM32=arm-linux-androideabi- \
+    ${DEVICE}_defconfig
 
 make -j$(nproc) \
     O=out \
