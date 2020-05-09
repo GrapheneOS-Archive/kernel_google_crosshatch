@@ -29,6 +29,8 @@ make \
     O=out \
     ARCH=arm64 \
     CC=clang \
+    HOSTCC=clang \
+    HOSTCXX=clang++ \
     CLANG_TRIPLE=aarch64-linux-gnu- \
     CROSS_COMPILE=aarch64-linux-android- \
     CROSS_COMPILE_ARM32=arm-linux-androideabi- \
@@ -38,6 +40,8 @@ make -j$(nproc) \
     O=out \
     ARCH=arm64 \
     CC=clang \
+    HOSTCC=clang \
+    HOSTCXX=clang++ \
     CLANG_TRIPLE=aarch64-linux-gnu- \
     CROSS_COMPILE=aarch64-linux-android- \
     CROSS_COMPILE_ARM32=arm-linux-androideabi-
