@@ -17,6 +17,7 @@ export KBUILD_BUILD_USER=grapheneos
 export KBUILD_BUILD_HOST=grapheneos
 
 PATH="$TOP/prebuilts/build-tools/linux-x86/bin:$PATH"
+PATH="$TOP/prebuilts/build-tools/path/linux-x86:$PATH"
 PATH="$TOP/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin:$PATH"
 PATH="$TOP/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin:$PATH"
 PATH="$TOP/prebuilts/clang/host/linux-x86/clang-r353983c/bin:$PATH"
