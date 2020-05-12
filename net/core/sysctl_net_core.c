@@ -22,14 +22,14 @@
 #include <net/busy_poll.h>
 #include <net/pkt_sched.h>
 
-static int zero = 0;
-static int one = 1;
-static int two __maybe_unused = 2;
-static int min_sndbuf = SOCK_MIN_SNDBUF;
-static int min_rcvbuf = SOCK_MIN_RCVBUF;
-static int max_skb_frags = MAX_SKB_FRAGS;
-static long long_one __maybe_unused = 1;
-static long long_max __maybe_unused = LONG_MAX;
+static int zero __read_only = 0;
+static int one __read_only = 1;
+static int two __maybe_unused __read_only = 2;
+static int min_sndbuf __read_only = SOCK_MIN_SNDBUF;
+static int min_rcvbuf __read_only = SOCK_MIN_RCVBUF;
+static int max_skb_frags __read_only = MAX_SKB_FRAGS;
+static long long_one __maybe_unused __read_only = 1;
+static long long_max __maybe_unused __read_only = LONG_MAX;
 
 static int net_msg_warn;	/* Unused, but still a sysctl */
 
