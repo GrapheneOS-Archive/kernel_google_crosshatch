@@ -40,21 +40,21 @@
 #include <net/sctp/sctp.h>
 #include <linux/sysctl.h>
 
-static int zero = 0;
-static int one = 1;
-static int timer_max = 86400000; /* ms in one day */
-static int int_max = INT_MAX;
-static int sack_timer_min = 1;
-static int sack_timer_max = 500;
-static int addr_scope_max = 3; /* check sctp_scope_policy_t in include/net/sctp/constants.h for max entries */
-static int rwnd_scale_max = 16;
-static int rto_alpha_min = 0;
-static int rto_beta_min = 0;
-static int rto_alpha_max = 1000;
-static int rto_beta_max = 1000;
+static int zero __read_only = 0;
+static int one __read_only = 1;
+static int timer_max __read_only = 86400000; /* ms in one day */
+static int int_max __read_only = INT_MAX;
+static int sack_timer_min __read_only = 1;
+static int sack_timer_max __read_only = 500;
+static int addr_scope_max __read_only = 3; /* check sctp_scope_policy_t in include/net/sctp/constants.h for max entries */
+static int rwnd_scale_max __read_only = 16;
+static int rto_alpha_min __read_only = 0;
+static int rto_beta_min __read_only = 0;
+static int rto_alpha_max __read_only = 1000;
+static int rto_beta_max __read_only = 1000;
 
-static unsigned long max_autoclose_min = 0;
-static unsigned long max_autoclose_max =
+static unsigned long max_autoclose_min __read_only = 0;
+static unsigned long max_autoclose_max __read_only =
 	(MAX_SCHEDULE_TIMEOUT / HZ > UINT_MAX)
 	? UINT_MAX : MAX_SCHEDULE_TIMEOUT / HZ;
 
