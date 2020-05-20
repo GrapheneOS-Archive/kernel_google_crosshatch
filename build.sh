@@ -26,6 +26,8 @@ PATH="$TOP/prebuilts/misc/linux-x86/dtc:$PATH"
 PATH="$TOP/prebuilts/misc/linux-x86/libufdt:$PATH"
 export LD_LIBRARY_PATH="$TOP/prebuilts/clang/host/linux-x86/clang-r353983c/lib64:$LD_LIBRARY_PATH"
 
+chrt -bp 0 $$
+
 make \
     O=out \
     ARCH=arm64 \
