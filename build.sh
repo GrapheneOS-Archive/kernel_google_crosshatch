@@ -15,6 +15,7 @@ ROOT_DIR=$(realpath ../../..)
 
 export KBUILD_BUILD_USER=grapheneos
 export KBUILD_BUILD_HOST=grapheneos
+export KBUILD_BUILD_TIMESTAMP="$(date -d "@$(git --no-pager show -s --format=%ct)")"
 
 PATH="$ROOT_DIR/prebuilts/build-tools/linux-x86/bin:$PATH"
 PATH="$ROOT_DIR/prebuilts/build-tools/path/linux-x86:$PATH"
