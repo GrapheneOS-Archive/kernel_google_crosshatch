@@ -13,6 +13,7 @@ fi
 
 ROOT_DIR=$(realpath ../../..)
 
+export KBUILD_BUILD_VERSION=1
 export KBUILD_BUILD_USER=grapheneos
 export KBUILD_BUILD_HOST=grapheneos
 export KBUILD_BUILD_TIMESTAMP="$(date -d "@$(git --no-pager show -s --format=%ct)")"
