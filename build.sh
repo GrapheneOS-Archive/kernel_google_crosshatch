@@ -22,11 +22,11 @@ PATH="$ROOT_DIR/prebuilts/build-tools/linux-x86/bin:$PATH"
 PATH="$ROOT_DIR/prebuilts/build-tools/path/linux-x86:$PATH"
 PATH="$ROOT_DIR/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin:$PATH"
 PATH="$ROOT_DIR/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin:$PATH"
-PATH="$ROOT_DIR/prebuilts/clang/host/linux-x86/clang-r353983c/bin:$PATH"
+PATH="$ROOT_DIR/prebuilts/clang/host/linux-x86/clang-r383902/bin:$PATH"
 PATH="$ROOT_DIR/prebuilts/misc/linux-x86/lz4:$PATH"
 PATH="$ROOT_DIR/prebuilts/misc/linux-x86/dtc:$PATH"
 PATH="$ROOT_DIR/prebuilts/misc/linux-x86/libufdt:$PATH"
-export LD_LIBRARY_PATH="$ROOT_DIR/prebuilts/clang/host/linux-x86/clang-r353983c/lib64:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$ROOT_DIR/prebuilts/clang/host/linux-x86/clang-r383902/lib64:$LD_LIBRARY_PATH"
 
 chrt -bp 0 $$
 
