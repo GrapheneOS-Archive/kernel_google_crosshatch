@@ -60,7 +60,6 @@ make -j$(nproc) \
     READELF=llvm-readelf \
     OBJSIZE=llvm-size \
     STRIP=llvm-strip \
-    OBJCOPY=llvm-objcopy \
     HOSTCC=clang \
     HOSTCXX=clang++ \
     HOSTLD=ld.lld \
