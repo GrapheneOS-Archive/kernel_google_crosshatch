@@ -25,9 +25,9 @@ ifneq ($(DTB_NAMES),)
 DTB_LIST := $(addsuffix .dtb,$(DTB_NAMES))
 DTB_OBJS := $(addprefix $(obj)/dts/,$(DTB_LIST))
 else
-DTB_OBJS := $(shell find $(obj)/dts/ -name \*.dtb)
+DTB_OBJS := $(shell find $(obj)/dts/ -name \*.dtb | sort)
 endif
-DTBO_OBJS := $(shell find -L $(obj)/dts/ -name \*.dtbo)
+DTBO_OBJS := $(shell find -L $(obj)/dts/ -name \*.dtbo | sort)
 
 # Add RTIC DTB to the DTB list if RTIC MPGen is enabled
 ifdef RTIC_MPGEN
